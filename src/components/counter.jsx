@@ -14,13 +14,13 @@ class Counter extends Component {
 
   renderTags() {
     if (this.state.tag.length === 0) return <p>there are no tags!</p>;
-    return (
-      <ul>
-        {this.state.tag.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-    );
+    // return (
+    //   <ul>
+    //     {this.state.tag.map((tag) => (
+    //       <li key={tag}>{tag}</li>
+    //     ))}
+    //   </ul>
+    // );
   }
 
   // constructor() {
@@ -28,8 +28,13 @@ class Counter extends Component {
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
 
-  handleIncrement = () => {
+  handleIncrement = (products) => {
+    console.log(products);
     this.setState({ count: this.state.count + 1 });
+  };
+
+  doHandleIncrement = () => {
+    this.handleIncrement({ id: 1 });
   };
 
   render() {
@@ -37,7 +42,7 @@ class Counter extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handleIncrement}
+          onClick={this.doHandleIncrement}
           className="btn btn-secondary btn-sm"
         >
           Increment

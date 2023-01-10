@@ -70,9 +70,6 @@ class Counter extends Component {
         >
           Delete
         </button>
-        <button onClick={this.handleReset} className="btn btn-success btn-sm">
-          Reset
-        </button>
       </div>
     );
   }

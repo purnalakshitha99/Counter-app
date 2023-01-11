@@ -54,7 +54,7 @@ import Counter from "./counter";
 class Counters extends Component {
   state = {
     counters: [
-      { id: 1, value: 0 },
+      { id: 1, value: 4 },
       { id: 2, value: 3 },
       { id: 3, value: 2 },
       { id: 4, value: 0 },
@@ -77,6 +77,33 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
+  handleIncrement = (counter) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value++;
+    console.log(this.state.counters[index]);
+    this.setState({ counters });
+  };
+
+  handleDecrement = (counter) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value--;
+    console.log(this.state.counters[index]);
+    this.setState({ counters });
+  };
+
+  handleReset = (counter) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value = 0;
+    console.log(this.state.counters[index]);
+    this.setState({ counters });
+  };
+
   render() {
     return (
       <div>
@@ -92,7 +119,10 @@ class Counters extends Component {
             value={counter.value}
             id={counter.id}
             onDelete={this.handleDelete}
+            onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
             counter={counter}
+            onReset={this.handleReset}
           ></Counter>
         ))}
       </div>

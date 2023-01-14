@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import App from "../App";
 
 class Counter extends Component {
   // styles = {

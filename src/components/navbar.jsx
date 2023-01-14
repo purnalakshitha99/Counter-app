@@ -4,9 +4,11 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar bg-body-tertiary">
-        <a className="vbar-brand" href="#">
-          Navbar
-        </a>
+        <div className="container-fluid">
+          <a className="navbar-brand h1" href="#">
+            Navbar
+          </a>
+        </div>
       </nav>
     );
   }

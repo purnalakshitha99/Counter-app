@@ -28,14 +28,15 @@ import React, { Component } from "react";
 //
 
 //stateless functional components
-const NavBar = (props) => {
+const NavBar = ({ totalCounters }) => {
   //methana props dana nisa yata this. eka ain kranw //this.props.totalCounters kiyan eka
+  //methana awasya eka warahan athule dapuwam aya hamathanama this.this. use karann one na ona eka ()athule dammama athi
   return (
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand h1" href="#">
           Navbar{" "}
-          <span className="badge text-bg-secondary">{props.totalCounters}</span>
+          <span className="badge text-bg-secondary">{totalCounters}</span>
         </a>
       </div>
     </nav>

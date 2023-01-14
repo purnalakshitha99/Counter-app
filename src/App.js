@@ -60,7 +60,9 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar
+          totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+        />
         <main className="container">
           <Counters
             onDelete={this.handleDelete}

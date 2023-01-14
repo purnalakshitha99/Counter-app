@@ -19,6 +19,14 @@ import React, { Component } from "react";
 
 // export default NavBar;
 
+//uda class ekak widihata gaththa eka yata eke widihata stateless functional components ekk widihata use karann puluwan
+//
+//
+//
+//
+//
+//
+
 //stateless functional components
 const NavBar = (props) => {
   //methana props dana nisa yata this. eka ain kranw //this.props.totalCounters kiyan eka

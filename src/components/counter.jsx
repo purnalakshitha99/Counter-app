@@ -52,7 +52,7 @@ class Counter extends Component {
     console.log("counter-Renderd");
     return (
       <div>
-        <h4>Counter #{this.props.id}</h4>
+        {/* <h4>Counter #{this.props.id}</h4> */}
 
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button

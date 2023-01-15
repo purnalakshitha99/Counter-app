@@ -54,8 +54,15 @@ import Counter from "./counter";
 class Counters extends Component {
   render() {
     console.log("--counters Rendered");
-    const { onDelete, onIncrement, onDecrement, onReset, onReset2, counters } =
-      this.props;
+    const {
+      onDelete,
+      onIncrement,
+      onDecrement,
+      onReset,
+      onReset2,
+      counters,
+      onMultiply,
+    } = this.props;
     return (
       <div>
         <button className="btn btn-primary btn-sm m-2" onClick={onReset2}>
@@ -71,6 +78,7 @@ class Counters extends Component {
             onDecrement={onDecrement}
             counter={counter}
             onReset={onReset}
+            onMultiply={onMultiply}
           ></Counter>
         ))}
       </div>

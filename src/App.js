@@ -66,6 +66,14 @@ class App extends Component {
     console.log(this.state.counters[index]);
     this.setState({ counters });
   };
+  handleMultiply = (counter) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value = counters[index].value * 2;
+    console.log(this.state.counters[index]);
+    this.setState({ counters });
+  };
   render() {
     console.log("app-Rederd");
     return (
@@ -81,6 +89,7 @@ class App extends Component {
             onReset={this.handleReset}
             counters={this.state.counters}
             onReset2={this.handleReset2}
+            onMultiply={this.handleMultiply}
           />
         </main>
       </>

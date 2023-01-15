@@ -59,13 +59,19 @@ class Counter extends Component {
           onClick={() => this.props.onIncrement(this.props.counter)}
           className="btn btn-secondary btn-sm"
         >
-          Increment
+          +
         </button>
         <button
           onClick={() => this.props.onDecrement(this.props.counter)}
           className="btn btn-primary btn-sm m-2"
         >
-          Decrement
+          -
+        </button>
+        <button
+          onClick={() => this.props.onMultiply(this.props.counter)}
+          className="btn btn-success btn-sm m-2"
+        >
+          x
         </button>
         {/* {this.state.tag.length === 0 && "please create new tags!"}
         {this.renderTags()} */}

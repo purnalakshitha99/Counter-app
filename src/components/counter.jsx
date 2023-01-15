@@ -51,42 +51,47 @@ class Counter extends Component {
   render() {
     console.log("counter-Renderd");
     return (
-      <div>
-        {/* <h4>Counter #{this.props.id}</h4> */}
-
-        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button
-          onClick={() => this.props.onIncrement(this.props.counter)}
-          className="btn btn-secondary btn-sm"
-        >
-          +
-        </button>
-        <button
-          onClick={() => this.props.onDecrement(this.props.counter)}
-          className="btn btn-primary btn-sm m-2"
-        >
-          -
-        </button>
-        <button
-          onClick={() => this.props.onMultiply(this.props.counter)}
-          className="btn btn-success btn-sm m-2"
-        >
-          x
-        </button>
-        {/* {this.state.tag.length === 0 && "please create new tags!"}
+      <div className="row">
+        <div className="col-1">
+          {" "}
+          <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+        </div>
+        <div className="col">
+          {" "}
+          <button
+            onClick={() => this.props.onIncrement(this.props.counter)}
+            className="btn btn-secondary btn-sm"
+          >
+            +
+          </button>
+          <button
+            onClick={() => this.props.onDecrement(this.props.counter)}
+            className="btn btn-primary btn-sm m-2"
+          >
+            -
+          </button>
+          <button
+            onClick={() => this.props.onMultiply(this.props.counter)}
+            className="btn btn-success btn-sm m-2"
+          >
+            x
+          </button>
+          {/* {this.state.tag.length === 0 && "please create new tags!"}
         {this.renderTags()} */}
-        <button
-          onClick={() => this.props.onDelete(this.props.counter.id)}
-          className="btn btn-danger btn-sm m-2"
-        >
-          Delete
-        </button>
-        <button
-          onClick={() => this.props.onReset(this.props.counter)}
-          className="btn btn-danger btn-sm m-2"
-        >
-          Reset
-        </button>
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-danger btn-sm m-2"
+          >
+            Delete
+          </button>
+          <button
+            onClick={() => this.props.onReset(this.props.counter)}
+            className="btn btn-danger btn-sm m-2"
+          >
+            Reset
+          </button>
+        </div>
+        {/* <h4>Counter #{this.props.id}</h4> */}
       </div>
     );
   }

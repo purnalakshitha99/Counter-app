@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import App from "../App";
 
 class Counter extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+  }
   // styles = {
   //   fontSize: 12,
   //   fontWeight: "bold",

@@ -37,6 +37,7 @@ class Counter extends Component {
   // };
 
   render() {
+    console.log("counter-Renderd");
     return (
       <div>
         <h4>Counter #{this.props.id}</h4>

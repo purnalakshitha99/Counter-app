@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Counters from "./components/counters";
 import NavBar from "./components/navbar";
-import Counter from "./components/counter";
+//import Counter from "./components/counter";
 
 class App extends Component {
   state = {
@@ -14,6 +14,15 @@ class App extends Component {
       { id: 4, value: 0 },
     ],
   };
+
+  constructor() {
+    super();
+    console.log("app - Constructor");
+  }
+
+  componentDidMount() {
+    console.log("app-Mounterd");
+  }
 
   handleDelete = (counterId) => {
     console.log(counterId);
@@ -58,6 +67,7 @@ class App extends Component {
     this.setState({ counters });
   };
   render() {
+    console.log("app-Rederd");
     return (
       <>
         <NavBar

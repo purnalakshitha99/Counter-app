@@ -29,6 +29,8 @@ import React, { Component } from "react";
 
 //stateless functional components
 const NavBar = ({ totalCounters }) => {
+  console.log("NavBar-Rendered");
+
   //methana props dana nisa yata this. eka ain kranw //this.props.totalCounters kiyan eka
   //methana awasya eka warahan athule dapuwam aya hamathanama this.this. use karann one na ona eka ()athule dammama athi
   return (
